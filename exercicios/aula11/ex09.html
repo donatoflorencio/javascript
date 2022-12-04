@@ -10,21 +10,23 @@
 
 <body>
   <h1>Detran</h1>
-  País de você mora: Brasil<input type="text" name="pais" id="pais">
-  <input type="button" value="Verificar">
+  País atual: <input type="text" name="pais" id="pais">
+  <input type="button" value="Verificar" onclick="calcular()">
   <div id="res"></div>
-
-
   <script>
     function calcular() {
-      var txtps = document.getElementById('pais')
-     var res = document.getElementById('res')
-     var des = (pais.value)
-
-     res.innerHTML = `O seu país atual é ${des} !`
+      var pais = document.getElementById('pais')
+      var res = document.getElementById('res')
+      var ps = String (pais.value)
+      res.innerHTML = `<p>V <strong>${ps}</strong></p>`
+      if (ps  == Brasil) {
+        res.innerHTML = `<p> Voce é brasileiro!</p>`
+      } //else (ps != Brasil) {
+        //res.innerHTML = `<p>Estrangeiro!</p>`
+      //}
+      
     }
   </script>
-
 
 </body>
 </html>
