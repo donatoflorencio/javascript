@@ -12,6 +12,20 @@ section {
   background-color: white;
   border-radius: 10px;
   padding: 15px;
+  position: relative;
+  height: 500px;
+}
+
+img {
+  position: absolute;
+  width: 40%;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div#res {
+  padding-top: 10px;
 }
 
 footer {
