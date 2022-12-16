@@ -1,11 +1,10 @@
-function somar() {
-  var tn1 = window.document.getElementById('textn1')
-  var tn2 = window.document.getElementById('textn2')
-  var res = window.document.getElementById('res')
+var btn = document.getElementById("btn-right")
+var cor = document.getElementById("cor")
 
-  var n1 = Number(tn1.value)
-  var n2 = Number(tn2.value)
-  var s = n1 + n2
+var btn = document.getElementById("btn")
+var cor = document.getElementById("cor")
 
-  res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${s}`
+function clicar() {
+  cor.style.background = 'blue'
+  cor.style.transition = '2s'
 }
