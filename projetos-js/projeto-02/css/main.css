@@ -40,12 +40,11 @@ body, html {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  margin-bottom: 2%;
   padding: 2%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--bg-color);
+  background: var(--color-shadow) no-repeat;
 }
 
 .titulo {
@@ -65,13 +64,14 @@ body, html {
   font-weight: 700;
   text-decoration: none;
   padding: 2% 15px;
+  border-radius: 8px;
 }
 
 .navbar .link:hover {
-  border-radius: 8px;
+  background-color: var(--color-cinza);
   text-shadow: 0px 0px 7px var(--color-cinza);
-  box-shadow: 0px 0px 1px 0px var(--color-shadow);
-  transition: .4s;
+  box-shadow: 0px 0px 1px 0px var(--color-cinza);
+  transition: .8s;
 }
 
 /* main */
@@ -81,8 +81,8 @@ body, html {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2%;
-  background-color: var(--color-cinza);
-  box-shadow: 0px 0px 10px 0px var(--color-branca);
+  background-color: var(--bg-color);
+  box-shadow: 0px 0px 17px 5px var(--color-shadow);
 }
 
 .subtitulo {
@@ -170,7 +170,7 @@ body, html {
   width: 100vw;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 70px 4% 10px ;
+  padding: 70px 2% 10px ;
   background: var(--bg-color);
   box-shadow: 0px 0px 100px 50px var(--color-shadow);
 }
