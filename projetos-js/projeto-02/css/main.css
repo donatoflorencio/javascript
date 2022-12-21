@@ -33,7 +33,7 @@ body, html {
   min-height: 100vh;
   background: var(--bg-color);
   background-size: cover;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .cabecalho {
@@ -80,14 +80,14 @@ body, html {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2%;
+  padding: 0 ;
   background-color: var(--bg-color);
 }
 
 .subtitulo {
   font-family: var(--fonte-titulo);
   font-weight: 400;
-  padding: 5% 0%;
+  padding: 5% 2%;
   padding-bottom: 0;
   letter-spacing: .5rem;
 }
@@ -163,9 +163,11 @@ body, html {
   font-size: 1.6rem;
   font-weight: 400;
   max-width: 70%;
-  padding: 4% 0;
+  padding: 4% 2%;
   letter-spacing: .2rem;
 }
+
+/* inputs */
 
 .perguntas {
   height: 200px;
@@ -176,7 +178,7 @@ body, html {
   padding-left: 2%;
   border-radius: 8px;
   margin-bottom: 20px;
-  margin-right: 2%;
+  margin-right: 0;
 }
 
 form {
@@ -206,6 +208,7 @@ form {
   background-color: transparent;
   color: #fff;
   border: 4px solid #fff;
+  padding-left: 7px;
 }
 
 #input-01:focus#input-01::placeholder{
@@ -224,12 +227,35 @@ form {
   font-weight: 600;
   letter-spacing: .3rem;
   padding-left: 5px;
+  cursor: pointer;
 }
 
 #input-02:hover {
   background-color: var(--color-branca);
   color: var(--color-preta);
   transition: all .8s;
+}
+
+.setas {
+  min-width: 100%;
+  max-width: 80vw;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+#serta-right {
+  font-size: 40px;
+  color: #fff;
+}
+
+#serta-left {
+  font-size: 40px;
+  color: #fff;
+  margin: -8px;
 }
 
 .rodape {
@@ -240,41 +266,3 @@ form {
   background: var(--color-cinza);
 }
 
-/* Media Queris */
-@media (max-width: 460px) {
-  html {
-    font-size: 45%;
-  }
-
-  .navbar .link {
-    padding: 2% 5px 0px 5px;
-  }
-
-  .cont-imagens {
-    flex-direction: column;
-  }
-
-  .cont-img-principal {
-    min-width: 100%;
-  }
-
-  .navbar-img {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .cont-assuntos {
-    margin-top: 10%;
-  }
-
-  .cont-assuntos .subtitulo {
-    line-height: 4rem;
-  }
-
-  .cont-assuntos .texto {
-    min-width: 100vw;
-    line-height: 3rem;
-  }
-
-}
