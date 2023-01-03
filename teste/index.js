@@ -1,18 +1,15 @@
-const btnMenu = document.getElementById('btn-menu');
+let nav = document.getElementById('nav')
+let btn = document.getElementById('btn-menu')
+let showSidebar = false; /*keyfreme*/
 
-function toggleMenu(event) {
-  if (event.type === 'touchstart') event.preventDefault()
-  const nav = document.getElementById('nav');
-  nav.classList.toggle('active');
-  const active = nav.classList.contains('active')
-  event.currentTarget.setAttribute('aria-expanded', active)
-  if (active) {
-    event.currentTarget.setAttribute('aria-label', 'Fechar Menu')
+function Sidebar() {
+  showSidebar = !showSidebar;
+
+  if(showSidebar) {
+    nav.style.left = "0vw"
+    nav.style.animationName = "showSidebar"
   } else {
-    event.currentTarget.setAttribute('aria-label', 'Abrir Menu')
-
+    nav.style.left = "-100vw"
   }
 }
 
-btnMenu.addEventListener('click', toggleMenu);
-btnMenu.addEventListener('touchstart', toggleMenu);

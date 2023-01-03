@@ -5,86 +5,110 @@
   font-family: sans-serif;
 }
 
-a, li {
-  text-decoration: none;
-  list-style: none;
-  color: black;
-}
-
-a:hover {
-  background: rgba(0, 0, 0, .05);
-}
-
-body {
+body, html {
   width: 100vw;
   height: 100vh;
 }
 
-#header {
-  width: 100vw;
-  height: 70px;
-  background-color: #e1e0e0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 3%;
+a, li {
+  color: #000;
+  text-decoration: none;
+  list-style: none;
 }
 
-#logo {
-  font-size: 1.5rem;
+header#header {
+  width: 100vw;
+  height: 70px;
+  background-color: #acbdef;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  border-bottom: 4px solid #99adf07a;
+}
+
+a#logo {
+  font-size: 1.5em;
   font-weight: bold;
 }
 
-
-#menu {
+nav#nav {
   display: flex;
-  gap: 1rem;
-  font-size: 1.2rem;
+  gap: 10px;
+  align-items: center;
+  
 }
 
-#menu a {
+button#btn-menu {
+  height: 40px;
+  padding: 0 20px;
+  border: none;
+  outline: 2px solid red;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #fff;
+}
+
+button#btn-menu:hover {
+  background: #fdfd 30%;
+}
+
+ul#menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: -100vw;
+}
+
+ul#menu li {
   display: block;
-  padding: .5rem;
+  width: 100vw;
+  background-color: #c4c4c4;
+  padding: 2%;
+  border-top: 2px solid #8989896a;
 }
 
-#btn-menu {
-  display: none;
+ul#menu li:hover {
+  background-color: #8989896a;
+  border-top: #898989;
+  box-shadow: 0px 0px 7px 2px #666666;;
+  transition: .6s;
+}
+
+ul#menu li:first-child {
+  border: none;
+  box-shadow: none;
+}
+
+ul#menu li a {
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-shadow: 0px 0px 5px #8989896a;
+}
+
+ul#menu li a:hover {
+  text-shadow: 0px 0px 5px #898989;
+  transition: .6s;
 }
 
 
-@media (max-width: 600px) {
 
-  #header {
-    border-bottom: 1.5px solid rgba(0, 0, 0, 0.05);
+
+
+
+
+
+
+
+@keyframes showSidebar {
+  from {
+  left: -100vw;
   }
 
-  #btn-menu {
-    display: block;
-    padding: 2px;
-  }
-
-  #menu {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: calc(100vh - 70px);
-    top: 70px;
-    right: 0;
-    background-color: #e7e7e7;
-  }
-
-  #nav.active #menu {
-    display: block;
-  }
-
-  #menu a {
-    padding: 3% 4%;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
-  }
-
-  #menu a:hover {
-    background-color: #e1e0e0;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-    transition: .6s;
+  top {
+   left: 0vw;
   }
 }
